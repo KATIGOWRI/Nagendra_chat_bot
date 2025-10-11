@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagendra K | Azure Data Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <h1 class="logo">Nagendra<span>K</span></h1>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <img src="assets/bg.avif" alt="Background" class="bg" />
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="assets/profile.jpeg" alt="Nagendra" class="profile" />
+      <h1>Hi, I’m <span class="highlight">Nagendra K</span></h1>
+      <h2>Azure Data Engineer | ETL | Databricks | ADF | Terraform | LangChain | LLMs | Kafka | Flink</h2>
+      <p>Experienced Azure Data Engineer skilled in real-time data streaming, cloud automation, and AI-driven analytics solutions.</p>
+
+      <div class="buttons">
+        <a href="assets/resume.pdf" target="_blank" class="btn">📄 Resume</a>
+        <a href="assets/Cover Letter.pdf" target="_blank" class="btn secondary">✉️ Cover Letter</a>
+        <a href="#skills" class="btn">🧠 See Skills</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Azure Data Factory</div>
+      <div class="skill">Azure Databricks</div>
+      <div class="skill">ADF Pipelines</div>
+      <div class="skill">Apache Kafka</div>
+      <div class="skill">Apache Flink</div>
+      <div class="skill">Synapse Analytics</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">Terraform</div>
+      <div class="skill">CI/CD (GitHub Actions)</div>
+      <div class="skill">Docker</div>
+      <div class="skill">AKS</div>
+      <div class="skill">Python / PySpark / SQL</div>
+      <div class="skill">Azure Functions</div>
+      <div class="skill">LangChain / LLMs / RAG</div>
+      <div class="skill">Faiss / ChromaDB</div>
+      <div class="skill">Snowflake / ADLS / Delta Lake</div>
+    </div>
+    <a href="#experience" class="btn">🎓 See Education & Experience</a>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section">
+    <h2>Education & Experience</h2>
+    <div class="timeline">
+      <div class="entry">
+        <h3>Elevance Health (2025–Present)</h3>
+        <p>Data Engineer | Automated real-time ingestion pipelines using Azure Data Factory, Databricks, and Flink; built predictive analytics models.</p>
+      </div>
+      <div class="entry">
+        <h3>CitiusTech (2022–2023)</h3>
+        <p>Azure Data Engineer | Architected scalable ETL pipelines with ADF, Kafka, and Flink. Integrated ML models in Databricks for clinical analytics.</p>
+      </div>
+      <div class="entry">
+        <h3>Mphasis (2021–2022)</h3>
+        <p>Data Engineer | Migrated real-time retail pipelines to Azure Synapse; implemented AI-based anomaly detection and Terraform CI/CD pipelines.</p>
+      </div>
+      <div class="entry">
+        <h3>Wilmington University</h3>
+        <p>Masters in Information Systems (2025)</p>
+      </div>
+      <div class="entry">
+        <h3>Guntur Engineering College</h3>
+        <p>B.Tech in Computer Science (2022)</p>
+  </section>
+<!-- CONTACT SECTION -->
+  <section id="contact" class="section contact">
+  <h2>Contact Me</h2>
+  <p>If you like to hire or work with me ? Get in touch directly or send a message below.</p>
+  <div class="contact-info">
+    <p>📧 <strong>Email:</strong> <a href="mailto:nagendrakatigowri76@gmail.com">nagendrakatigowri76@gmail.com</a></p>
+    <p>📱 <strong>Phone:</strong> <a href="tel:+14847161024">+1 (484) 716-1024</a></p>
+    <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nag-k-45646b1b6" target="_blank">linkedin.com/in/nag-k-45646b1b6</a></p>
+  </div>
+
+  <form action="https://formsubmit.co/nagendrakatigowri76@gmail.com" method="POST" class="contact-form">
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New contact from Nagendra portfolio!">
+    <input type="hidden" name="_template" value="table">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+  <!-- CHATBOT PLACEHOLDER -->
+  <div id="chat-layer" class="chatbot">
+    <button class="chat-toggle" onclick="toggleChat()">💬 Chat with Nagendra</button>
+    <div id="chat-box" class="hidden">
+      <iframe src="chat.html" title="Chatbot" class="chat-frame"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
