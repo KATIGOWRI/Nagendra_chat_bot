@@ -19,7 +19,7 @@ h1, h2, h3 {
 }
 
 .section {
-  padding: 80px 20px;
+  padding: 50px 20px; /* reduced spacing from 80px to 50px */
   text-align: center;
 }
 
@@ -197,7 +197,7 @@ h1, h2, h3 {
 
 .entry {
   background: #1e293b;
-  margin: 20px 0;
+  margin: 15px 0; /* reduced from 20px */
   padding: 20px;
   border-left: 4px solid #00b4d8;
   border-radius: 6px;
@@ -218,15 +218,15 @@ h1, h2, h3 {
 
 .contact-form {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 20px auto; /* reduced from 30px */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
+  padding: 8px;
   border-radius: 6px;
   border: none;
   outline: none;
