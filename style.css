@@ -201,6 +201,43 @@ body {
   cursor: pointer;
 }
 
+/* Hamburger menu button hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/* Mobile menu */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide by default */
+    flex-direction: column;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: 60px; /* adjust according to navbar height */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* Show hamburger button on mobile */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 .chat-frame {
   width: 350px;
   height: 500px;
