@@ -10,10 +10,7 @@
   <!-- NAVIGATION -->
   <nav class="navbar">
     <h1 class="logo">Nagendra<span>K</span></h1>
-
-    <!-- Hamburger button for mobile -->
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -31,7 +28,6 @@
       <h1>Hi, I’m <span class="highlight">Nagendra K</span></h1>
       <h2>Azure Data Engineer | ETL | Databricks | ADF | Terraform | LangChain | LLMs | Kafka | Flink</h2>
       <p>Experienced Azure Data Engineer skilled in real-time data streaming, cloud automation, and AI-driven analytics solutions.</p>
-
       <div class="buttons">
         <a href="assets/resume.pdf" target="_blank" class="btn">📄 Resume</a>
         <a href="assets/Cover Letter.pdf" target="_blank" class="btn secondary">✉️ Cover Letter</a>
@@ -101,11 +97,12 @@
       <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nag-k-45646b1b6" target="_blank">linkedin.com/in/nag-k-45646b1b6</a></p>
     </div>
 
-    <!-- Form Submission -->
+    <!-- Contact Form -->
     <form action="https://formsubmit.co/nagendrakatigowri76@gmail.com" method="POST" class="contact-form" onsubmit="return validateEmail(event)">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New contact from Nagendra portfolio!">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Hi there! 👋 Thank you for reaching out to Nagendra. I’ve received your message and will get back to you soon. Have a great day! 🚀">
       <input type="hidden" name="_next" value="https://katigowri.github.io/Nagendra_chat_bot/thankyou.html">
 
       <input type="text" name="name" placeholder="Your Name" required />
@@ -117,7 +114,7 @@
     </form>
   </section>
 
-  <!-- CHATBOT PLACEHOLDER -->
+  <!-- CHATBOT -->
   <div id="chat-layer" class="chatbot">
     <button class="chat-toggle" onclick="toggleChat()">💬 Chat with Nagendra</button>
     <div id="chat-box" class="hidden">
@@ -126,23 +123,5 @@
   </div>
 
   <script src="script.js"></script>
-
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
-
-    // Validate email before submitting
-    function validateEmail(event) {
-      const email = document.getElementById('email').value;
-      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!pattern.test(email)) {
-        alert('❌ Please enter a valid email address.');
-        event.preventDefault();
-        return false;
-      }
-      return true;
-    }
-  </script>
 </body>
 </html>
