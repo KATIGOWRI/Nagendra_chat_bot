@@ -37,6 +37,16 @@ body {
 .nav-links a { color: #fff; text-decoration: none; transition: color 0.3s; }
 .nav-links a:hover { color: #00bfff; }
 
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 /* =========================
    HERO SECTION
    ========================= */
@@ -79,14 +89,20 @@ body {
 
 .highlight { color: #00bfff; }
 
-.buttons { margin-top: 20px; } /* reduced spacing */
+/* Hero buttons aligned in one row */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 .btn {
   background: #00bfff;
   color: white;
   padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
-  margin: 5px;
   transition: background 0.3s;
 }
 .btn:hover { background: #008ccc; }
@@ -99,13 +115,13 @@ body {
    SECTIONS
    ========================= */
 .section {
-  padding: 40px 20px; /* was 80px 20px — reduced for compact look */
+  padding: 40px 20px;
   text-align: center;
 }
 
 .section h2 {
   color: #00bfff;
-  margin-bottom: 15px; /* was 20px */
+  margin-bottom: 15px;
 }
 
 /* =========================
@@ -138,8 +154,8 @@ body {
 
 .entry {
   background: #1c2433;
-  margin: 10px 0; /* reduced spacing from 15px to 10px */
-  padding: 12px; /* reduced padding slightly */
+  margin: 10px 0;
+  padding: 12px;
   border-radius: 8px;
 }
 
@@ -147,7 +163,7 @@ body {
    CONTACT FORM
    ========================= */
 .contact-info {
-  margin-bottom: 10px; /* was 20px — reduced */
+  margin-bottom: 10px;
   font-size: 16px;
 }
 
@@ -164,12 +180,12 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 8px; /* was 10px — reduced */
+  gap: 8px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 8px; /* was 10px — reduced */
+  padding: 8px;
   border: none;
   border-radius: 5px;
 }
@@ -177,7 +193,7 @@ body {
 .contact-form button {
   background: #00bfff;
   border: none;
-  padding: 10px; /* was 12px — reduced */
+  padding: 10px;
   color: white;
   border-radius: 5px;
 }
@@ -201,23 +217,27 @@ body {
   cursor: pointer;
 }
 
-/* Hamburger menu button hidden on desktop */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  background: none;
+.chat-frame {
+  width: 350px;
+  height: 500px;
   border: none;
-  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  margin-top: 10px;
 }
-/* Mobile menu */
+
+.hidden { display: none; }
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none; /* hide by default */
+    display: none;
     flex-direction: column;
     background-color: #1a1a1a;
     position: absolute;
-    top: 60px; /* adjust according to navbar height */
+    top: 60px;
     right: 0;
     width: 200px;
     padding: 10px;
@@ -235,24 +255,16 @@ body {
   .menu-toggle {
     display: block;
   }
-}
 
-
-.chat-frame {
-  width: 350px;
-  height: 500px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin-top: 10px;
-}
-
-.hidden { display: none; }
-
-/* =========================
-   MEDIA QUERIES
-   ========================= */
-@media (max-width: 768px) {
   .hero h1 { font-size: 28px; }
-  .nav-links { display: none; }
+  .hero h2 { font-size: 16px; }
+  .hero p { font-size: 14px; }
+}
+
+@media screen and (max-width: 480px) {
+  .hero .buttons a {
+    flex: 1;
+    min-width: 90px;
+    text-align: center;
+  }
 }
