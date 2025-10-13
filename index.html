@@ -94,25 +94,24 @@
   <!-- CONTACT SECTION -->
   <section id="contact" class="section contact">
     <h2>Contact Me</h2>
-    <p>If you like to hire or work with me ? Get in touch directly or send a message below.</p>
+    <p>If you like to hire or work with me? Get in touch directly or send a message below.</p>
     <div class="contact-info">
       <p>📧 <strong>Email:</strong> <a href="mailto:nagendrakatigowri76@gmail.com">nagendrakatigowri76@gmail.com</a></p>
       <p>📱 <strong>Phone:</strong> <a href="tel:+14847161024">+1 (484) 716-1024</a></p>
       <p>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nag-k-45646b1b6" target="_blank">linkedin.com/in/nag-k-45646b1b6</a></p>
     </div>
 
-    <!--Form Submission form sender-->
-    <form action="https://formsubmit.co/nagendrakatigowri76@gmail.com" method="POST" class="contact-form">
-      <!-- Prevent spam -->
+    <!-- Form Submission -->
+    <form action="https://formsubmit.co/nagendrakatigowri76@gmail.com" method="POST" class="contact-form" onsubmit="return validateEmail(event)">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_subject" value="New contact from Nagendra portfolio!">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://katigowri.github.io/thankyou.html">
 
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <!-- Optional: US phone number field -->
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Your Phone (USA)" pattern="^\+?1?\s?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$" title="Enter a valid US phone number" required />
-      <textarea name="message" placeholder="Your message from me" rows="4" required></textarea>
+      <textarea name="message" placeholder="Your message for me" rows="4" required></textarea>
 
       <button type="submit" class="btn">Send Message</button>
     </form>
@@ -128,11 +127,21 @@
 
   <script src="script.js"></script>
 
-  <!-- Add mobile menu toggle script -->
   <script>
     function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('show');
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+
+    // Validate email before submitting
+    function validateEmail(event) {
+      const email = document.getElementById('email').value;
+      const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!pattern.test(email)) {
+        alert('❌ Please enter a valid email address.');
+        event.preventDefault();
+        return false;
+      }
+      return true;
     }
   </script>
 </body>
