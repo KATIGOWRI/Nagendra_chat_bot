@@ -116,97 +116,97 @@ Have a great day! 🚀">
   </section>
 
   <!-- CHATBOT -->
-  <div id="chat-layer" class="chatbot">
-    <button class="chat-toggle" onclick="NKChat.open()">
-      <span class="dot"></span> Chat with Nagendra
-    </button>
+<div id="chat-layer" class="chatbot">
+  <button class="chat-toggle" onclick="NKChat.open()">
+    <span class="dot"></span> Chat with Nagendra
+  </button>
 
-    <div id="nk-chat" class="nk-chat hidden" aria-hidden="true">
-      <div class="nk-chat-header">
-        <div class="id">
-          <div class="avatar">NK</div>
-          <div class="meta">
-            <strong>Chat with Nagendra</strong>
-            <div class="status"><span class="online-dot"></span> Online</div>
-          </div>
-        </div>
-        <div class="actions">
-          <button class="icon" title="Minimize" onclick="NKChat.min()">–</button>
-          <button class="icon" title="Close" onclick="NKChat.close()">×</button>
+  <div id="nk-chat" class="nk-chat hidden" aria-hidden="true">
+    <div class="nk-chat-header">
+      <div class="id">
+        <div class="avatar">NK</div>
+        <div class="meta">
+          <strong>Chat with Nagendra</strong>
+          <div class="status"><span class="online-dot"></span> Online</div>
         </div>
       </div>
-
-      <div class="nk-chat-body">
-        <div id="nk-loader" class="nk-loader">
-          <div class="bubble"></div>
-          <div class="bubble w2"></div>
-          <div class="bubble w3"></div>
-        </div>
-
-        <iframe
-          id="nk-frame"
-          src="https://nag4729-chat-bot-nagendra.hf.space/"
-          title="Chatbot"
-          class="nk-frame"
-          loading="eager"
-          referrerpolicy="no-referrer"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          allow="clipboard-write; autoplay">
-        </iframe>
+      <div class="actions">
+        <button class="icon" title="Minimize" onclick="NKChat.min()">–</button>
+        <button class="icon" title="Close" onclick="NKChat.close()">×</button>
       </div>
     </div>
+
+    <div class="nk-chat-body">
+      <div id="nk-loader" class="nk-loader">
+        <div class="bubble"></div>
+        <div class="bubble w2"></div>
+        <div class="bubble w3"></div>
+      </div>
+
+      <iframe
+        id="nk-frame"
+        src="https://nag4729-chat-bot-nagendra.hf.space/"
+        title="Chatbot"
+        class="nk-frame"
+        loading="eager"
+        referrerpolicy="no-referrer"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        allow="clipboard-write; autoplay">
+      </iframe>
+    </div>
   </div>
+</div>
+<!-- BOT SCRIPT (scoped to the widget only) -->
+<script>
+  // Chat controller (no changes to your site JS)
+  const NKChat = {
+    launcher: null,
+    el: null,
+    frame: null,
+    loader: null,
 
-  <!-- SCRIPT -->
-  <script>
-    // Toggle mobile navbar
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
+    init() {
+      this.launcher = document.querySelector('.chat-toggle');
+      this.el = document.getElementById('nk-chat');
+      this.frame = document.getElementById('nk-frame');
+      this.loader = document.getElementById('nk-loader');
 
-    // Validate email input
-    function validateEmail(event) {
-      const emailInput = document.getElementById('email');
-      if (!emailInput.value.includes('@')) {
-        alert('Please enter a valid email address');
-        event.preventDefault();
-        return false;
+      // Hide loader when the chatbot iframe finishes loading
+      if (this.frame) {
+        this.frame.addEventListener('load', () => {
+          if (this.loader) this.loader.style.display = 'none';
+        });
       }
-      return true;
-    }
+    },
 
-    // Chat controller
-    const NKChat = {
-      launcher: document.querySelector('.chat-toggle'),
-      el: document.getElementById('nk-chat'),
-      frame: document.getElementById('nk-frame'),
-      loader: document.getElementById('nk-loader'),
-
-      open() {
-        this.el.classList.remove('hidden');
-        requestAnimationFrame(() => this.el.classList.add('show'));
-        this.el.setAttribute('aria-hidden', 'false');
+    open() {
+      this.el.classList.remove('hidden');
+      requestAnimationFrame(() => this.el.classList.add('show'));
+      this.el.setAttribute('aria-hidden', 'false');
+      if (this.launcher) {
         this.launcher.style.opacity = '0';
         this.launcher.style.pointerEvents = 'none';
-      },
+      }
+    },
 
-      close() {
-        this.el.classList.remove('show');
-        this.el.setAttribute('aria-hidden', 'true');
-        setTimeout(() => this.el.classList.add('hidden'), 250);
+    close() {
+      this.el.classList.remove('show');
+      this.el.setAttribute('aria-hidden', 'true');
+      setTimeout(() => this.el.classList.add('hidden'), 250);
+      if (this.launcher) {
         this.launcher.style.opacity = '1';
         this.launcher.style.pointerEvents = 'auto';
-      },
+      }
+    },
 
-      min() { this.close(); }
-    };
+    min() { this.close(); }
+  };
 
-    window.NKChat = NKChat;
+  window.NKChat = NKChat;
+  NKChat.init();
 
-    // Hide loader when chatbot iframe finishes loading
-    NKChat.frame.addEventListener('load', () => {
-      if (NKChat.loader) NKChat.loader.style.display = 'none';
-    });
-  </script>
-</body>
-</html>
+  // ESC to close (bot-only)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') NKChat.close();
+  });
+</script>
