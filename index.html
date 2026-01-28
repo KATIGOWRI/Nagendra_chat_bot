@@ -27,9 +27,7 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transition: all 0.3s ease;
     }
-    .chat-toggle:hover {
-      transform: scale(1.05);
-    }
+    .chat-toggle:hover { transform: scale(1.05); }
     .chat-toggle .dot {
       width: 10px;
       height: 10px;
@@ -122,20 +120,12 @@
     .nk-loader .w2 { animation-delay: 0.2s; }
     .nk-loader .w3 { animation-delay: 0.4s; }
     @keyframes bounce { to { transform: translateY(-12px); } }
-    .nk-frame {
-      border: none;
-      flex: 1;
-      width: 100%;
-      height: 100%;
-      border-radius: 0 0 15px 15px;
-    }
-    @media (max-width: 480px) {
-      .nk-chat { width: 90%; height: 500px; bottom: 70px; }
-      .chat-toggle { font-size: 14px; padding: 10px 16px; }
-    }
+    .nk-frame { border: none; flex: 1; width: 100%; height: 100%; border-radius: 0 0 15px 15px; }
+    @media (max-width: 480px) { .nk-chat { width: 90%; height: 500px; bottom: 70px; } .chat-toggle { font-size: 14px; padding: 10px 16px; } }
   </style>
 </head>
 <body>
+
   <!-- NAVIGATION -->
   <nav class="navbar">
     <h1 class="logo">Nagendra<span>K</span></h1>
@@ -143,7 +133,7 @@
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#experience">Projects & Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -156,7 +146,7 @@
       <img src="assets/profile.jpeg" alt="Nagendra" class="profile" />
       <h1>Hi, I’m <span class="highlight">Nagendra K</span></h1>
       <h2>Azure Data Engineer | ETL | Databricks | ADF | Terraform | LangChain | LLMs | Kafka | Flink</h2>
-      <p>Experienced Azure Data Engineer skilled in real-time data streaming, cloud automation, and AI-driven analytics solutions.</p>
+      <p>Fresher Azure Data Engineer skilled in building cloud-based data pipelines, real-time streaming, and AI-driven analytics solutions.</p>
       <div class="buttons">
         <a href="assets/resume.pdf" target="_blank" class="btn">📄 Resume</a>
         <a href="assets/Cover Letter.pdf" target="_blank" class="btn secondary">✉️ Cover Letter</a>
@@ -183,35 +173,48 @@
       <div class="skill">Python / PySpark / SQL</div>
       <div class="skill">Azure Functions</div>
       <div class="skill">LangChain / LLMs / RAG</div>
-      <div class="skill">Faiss / ChromaDB</div>
-      <div class="skill">Snowflake / ADLS / Delta Lake</div>
-    </div>
-    <a href="#experience" class="btn">🎓 See Education & Experience</a>
+      <div class="skill">Faiss / ChromaDB</div>    </div>
+    <a href="#experience" class="btn">🎓 See Projects & Education</a>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- PROJECTS & EDUCATION -->
   <section id="experience" class="section">
-    <h2>Education & Experience</h2>
+    <h2>Projects & Education</h2>
+    
     <div class="timeline">
       <div class="entry">
-        <h3>Elevance Health (2025–Present)</h3>
-        <p>Data Engineer | Automated real-time ingestion pipelines using Azure Data Factory, Databricks, and Flink; built predictive analytics models.</p>
+        <h3>AI-Powered Knowledge Extraction Chatbot</h3>
+        <p>
+          <strong>Technologies:</strong> Python, LangChain, Azure OpenAI, FAISS, Sentence Transformers<br>
+          Developed an AI-powered chatbot capable of answering queries from large document repositories. Achieved <strong>90% response accuracy</strong> and reduced lookup time by <strong>80%</strong>. 
+          <br><a href="https://github.com/katigowri/Nagendra_chat_bot" target="_blank">GitHub Project Link</a>
+        </p>
       </div>
+
       <div class="entry">
-        <h3>CitiusTech (2022–2023)</h3>
-        <p>Azure Data Engineer | Architected scalable ETL pipelines with ADF, Kafka, and Flink. Integrated ML models in Databricks for clinical analytics.</p>
+        <h3>Cloud ETL Data Pipeline Project</h3>
+        <p>
+          <strong>Technologies:</strong> Azure Data Factory, Databricks, Delta Lake, SQL, Power BI<br>
+          Built end-to-end ETL pipelines ingesting <strong>1M+ records per month</strong>. Implemented automated data quality checks with <strong>99.9% accuracy</strong> and created dashboards to track KPIs and trends.
+        </p>
       </div>
+
       <div class="entry">
-        <h3>Mphasis (2021–2022)</h3>
-        <p>Data Engineer | Migrated real-time retail pipelines to Azure Synapse; implemented AI-based anomaly detection and Terraform CI/CD pipelines.</p>
+        <h3>Real-Time Streaming & Analytics Project</h3>
+        <p>
+          <strong>Technologies:</strong> Apache Kafka, Spark Structured Streaming, Azure Event Hubs<br>
+          Designed streaming pipelines processing <strong>100K+ events per hour</strong>. Performed live transformations and aggregations enabling near real-time monitoring and analytics.
+        </p>
       </div>
+
       <div class="entry">
         <h3>Wilmington University</h3>
-        <p>Masters in Information Systems (2025)</p>
+        <p>Master of Science in Information Systems (Project Management) - 2025</p>
       </div>
+
       <div class="entry">
         <h3>Guntur Engineering College</h3>
-        <p>B.Tech in Computer Science (2022)</p>
+        <p>B.Tech in Computer Science and Engineering - 2022</p>
       </div>
     </div>
   </section>
@@ -223,7 +226,7 @@
     <div class="contact-info">
       <p>📧 <strong>Email:</strong> <a href="mailto:nagendrakatigowri76@gmail.com">nagendrakatigowri76@gmail.com</a></p>
       <p>📱 <strong>Phone:</strong> <a href="tel:+14847161024">+1 (484) 716-1024</a></p>
-      <p>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nagendra-k-2b2561265/" target="_blank">linkedin.com/in/nag-k-45646b1b6</a></p>
+      <p>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nagendra-k-2b2561265/" target="_blank">linkedin.com/in/nagendra-k-2b2561265</a></p>
     </div>
 
     <form action="https://formsubmit.co/nagendrakatigowri76@gmail.com" method="POST" class="contact-form" onsubmit="return validateEmail(event)">
@@ -231,10 +234,7 @@
       <input type="hidden" name="_subject" value="New contact from Nagendra portfolio!">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://katigowri.github.io/Nagendra_chat_bot/thankyou.html">
-      <input type="hidden" name="_autoresponse" value="Hi there! 👋
-Thank you for reaching out to Nagendra.
-I’ve received your message and will get back to you soon.
-Have a great day! 🚀">
+      <input type="hidden" name="_autoresponse" value="Hi there! 👋 Thank you for reaching out to Nagendra. I’ll get back to you soon. 🚀">
 
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" id="email" name="email" placeholder="Your Email" required>
